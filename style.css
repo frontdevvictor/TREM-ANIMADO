@@ -72,3 +72,151 @@ body{
     top: -80px;
     box-shadow: 50px 15px rgb(252,163,17,0.1), 125px 40px rgb(252,163,17,0.1), 125px 55px rgb(252,163,17,0.1);
 }
+
+.windows:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(252, 163, 17);
+    width: 15px;
+    height: 20px;
+    top: -50px;
+    left: -102px;
+    box-shadow: -115px 20px rgb(252,163,17), 47px 50px rgb(252,163,17);
+    animation: flash 4s ease infinite alternate;
+}
+
+/* Estilizando a ponte */
+.bridge {
+    position: absolute;
+    z-index: 4;
+    width: 400px;
+    height: 5px;
+    top: 200px;
+    border-bottom: 5px solid #333;
+    border-top: 2px solid #333;
+}
+
+.bridge::after, .bridge:before {
+    content: "";
+    position: absolute;
+    background-color: #333;
+}
+
+.bridge:before {
+    width: 2px;
+    height: 5px;
+    left: 60px;
+    box-shadow: 110px 0px #333,160px 0px #333,270px 0px #333,320px 0px #333;
+}
+
+.bridge:after {
+    width: 15px;
+    height: 150px;
+    left: 110px;
+    box-shadow: 160px 0 #333;
+}
+
+/* Estiizando o trem */
+.train {
+    position: absolute;
+    z-index: 3;
+    animation: move 5s linear infinite;
+}
+
+.carOne {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: #9e2a2b;
+    left: 220px;
+    top: -50px;
+    border-radius: 0 30px 0 0;
+    overflow: hidden;
+    box-shadow: inset 0 -5px #540b0e;
+}
+
+.carOne:before {
+    content:"";
+    position: absolute;
+    width: 40px;
+    height: 15px;
+    background-color: #540b0e;
+    top:5px;
+    left:60px;
+}
+
+.carOne:after {
+    content:"";
+    position: absolute;
+    background-color: #540b0e;
+    width:40px;
+    height:7px;
+    left:10px;
+    top:10px;
+}
+
+.carTwo {
+    position: absolute;
+    height: 30px;
+    width:90px;
+    background-color: #9e2a2b;
+    left:125px;
+    top:-50px;
+    box-shadow: inset 0 -5px #540b0e;
+}
+
+.carTwo:before {
+    content:"";
+    position: absolute;
+    background-color: #540b0e;
+    width:30px;
+    height:7px;
+    top:10px;
+    left:10px;
+    box-shadow: 40px 0px #540b0e;
+}
+
+.carTwo:after {
+    position: absolute;
+    content:"";
+    background-color: #210405;
+    border-radius:50%;
+    width:10px;
+    height:10px;
+    top:30px;
+    left:180px;
+    box-shadow:-20px 0 #210405,-40px 0 #210405,-60px 0 #210405,-80px 0 #210405,-100px 0 #210405,-120px 0 #210405,-140px 0 #210405,-160px 0 #210405,-180px 0 #210405,-200px 0 #210405,-220px 0 #210405,-240px 0 #210405,-260px 0 #210405,-280px 0 #210405;
+}
+
+.carThree {
+    position: absolute; 
+    width: 100px;
+    height:30px;
+    background-color: #9e2a2b;
+    border-radius: 30px 0 0 0;
+    overflow:hidden;
+    box-shadow: inset 0 -5px #540b0e;
+    left:20px;
+    top:-50px;
+}
+
+.carThree:before {
+    content:"";
+    position: absolute;
+    background-color: #540b0e;
+    width: 40px;
+    height: 15px;
+    top:5px;
+}
+
+.carThree:after {
+    content:"";
+    position: absolute;
+    background-color: #540b0e;
+    width:40px;
+    height:7px;
+    top:10px;
+    left:50px;
+}
+
+/* adicionando a lua e as estrelas */
